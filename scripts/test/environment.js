@@ -1,12 +1,12 @@
 /**
  * @since 2019-12-31 11:27
- * @author vivaxy
+ * @author vivaxy, stevebel
  */
 const path = require('path');
 const glob = require('fast-glob');
-const NodeEnvironment = require('jest-environment-node');
+const { TestEnvironment } = require('jest-environment-node');
 
-module.exports = class PNGTestEnvironment extends NodeEnvironment {
+module.exports = class PNGTestEnvironment extends TestEnvironment {
   constructor(config, { docblockPragmas, testPath }) {
     super(config);
     this.todo = docblockPragmas.todo || [];
@@ -26,7 +26,7 @@ module.exports = class PNGTestEnvironment extends NodeEnvironment {
       }
       return !this.todo.includes(testcaseName);
     });
-    this.global.testcases = filteredTestcaseNames.map(function(testcaseName) {
+    this.global.testcases = filteredTestcaseNames.map(function (testcaseName) {
       return [testcaseName, path.join(fixturesPath, testcaseName)];
     });
     await super.setup();
