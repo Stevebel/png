@@ -1,6 +1,6 @@
 {
   "name": "@stevebel/png",
-  "version": "1.0.0-beta.2",
+  "version": "1.5.1",
   "description": "🖼A full-featured PNG decoder and encoder.",
   "keywords": [
     "png",
