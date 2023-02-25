@@ -7,7 +7,7 @@
 [![Standard Version][standard-version-image]][standard-version-url]
 [![Codecov][codecov-image]][codecov-url]
 
-> 🖼A full-featured PNG decoder and encoder.
+> 🖼A full-featured PNG decoder and encoder. Fork of @vivaxy/png maintained as of Feb 2023.
 
 # Supports
 
